@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import Layout from './containers/Layout/Layout';
-import Home from './containers/Home/Home';
+
+const Home = lazy(() => import('./containers/Home/Home'));
+const Article = lazy(() => import('./containers/Article/Article'));
+const ErrorNotFound = lazy(() => import('./components/ErrorNotFound/ErrorNotFound'));
 
 const App = () => {
   return (
     <Layout>
-      <Home/>
+        <Suspense fallback={<div>Loading...</div>}>
+            <Switch>
+                <Route path='/' component={Home} exact/>
+                <Route path='/article/:id' component={Article} />
+                <Route component={ ErrorNotFound } />
+            </Switch>
+        </Suspense>
     </Layout>
   );
 };
