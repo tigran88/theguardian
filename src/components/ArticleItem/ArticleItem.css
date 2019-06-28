@@ -1,0 +1,13 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.3rem;
+    width: 30%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.article__img {
+    width: 100%;
+    height: auto;
+}

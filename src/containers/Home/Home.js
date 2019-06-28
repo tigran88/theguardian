@@ -1,8 +1,10 @@
 import React from 'react';
 
+import Articles from '../Articles/Articles';
+
 const Home = () => {
     return (
-        <div>Home</div>
+        <Articles />
     )
 };
 

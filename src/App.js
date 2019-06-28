@@ -9,17 +9,17 @@ const Article = lazy(() => import('./containers/Article/Article'));
 const ErrorNotFound = lazy(() => import('./components/ErrorNotFound/ErrorNotFound'));
 
 const App = () => {
-  return (
-    <Layout>
-        <Suspense fallback={<div>Loading...</div>}>
-            <Switch>
-                <Route path='/' component={Home} exact/>
-                <Route path='/article/:id' component={Article} />
-                <Route component={ ErrorNotFound } />
-            </Switch>
-        </Suspense>
-    </Layout>
-  );
+    return (
+        <Layout>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Switch>
+                    <Route path='/' component={ Home } exact/>
+                    <Route path='/article/:id' component={ Article } />
+                    <Route component={ ErrorNotFound } />
+                </Switch>
+            </Suspense>
+        </Layout>
+    );
 };
 
 export default App;
