@@ -9,6 +9,14 @@ import App from './App';
 
 axios.defaults.baseURL = 'https://content.guardianapis.com/';
 
+axios.interceptors.request.use((config) => ({
+    ...config,
+    params: {
+        'api-key': 'test',
+        ...config.params
+    }
+}));
+
 ReactDOM.render(
     <BrowserRouter>
         <App />

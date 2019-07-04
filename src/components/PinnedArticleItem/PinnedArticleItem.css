@@ -1,0 +1,30 @@
+.pinned-article {
+    display: flex;
+    width: 200px;
+    white-space: initial;
+    flex-direction: column;
+    flex: 0 0 200px;
+    margin-left: 1.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: .8rem;
+    text-decoration: none;
+}
+
+.pinned-article:first-child {
+    margin-left: 0;
+}
+
+.pinned-article__img {
+    max-width: 100%;
+}
+
+.pinned-article__title {
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+.pinned-article__category {
+    margin-top: auto;
+    font-weight: 700;
+}

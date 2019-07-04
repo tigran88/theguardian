@@ -1,5 +1,64 @@
-.articles {
+.infinite-scroll-component a:link {
+    color: #9d0c10;
+}
+
+.infinite-scroll-component a:visited {
+    color: #6600B3;
+}
+
+.infinite-scroll-component, .articles {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.infinite-scroll-component .article-item {
+    text-decoration: none;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.infinite-scroll-component .loader {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.pinned-articles {
+    white-space: nowrap;
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fafafa;
+    overflow-x: auto;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.pinned-articles::-webkit-scrollbar {
+    width: 12px;
+    background-color: #ccc;
+}
+
+.pinned-articles::-webkit-scrollbar-thumb {
+    background-color: #9d0c10;;
+}
+
+.articles__bell {
+    position: fixed;
+    bottom: 4rem;
+    right: 3rem;
+}
+
+.articles__bell .fa-bell {
+    color: #9d0c10;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .infinite-scroll-component {
+        justify-content: center;
+    }
 }
